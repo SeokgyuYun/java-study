@@ -28,10 +28,39 @@ public class BitwiseStudy {
         System.out.printf("%d ^ %d = %d\n", op1, op2, result);
     }
 
+    void studyNot() {
+        byte value1 = (byte) 0b11110101;
+        byte value2 = (byte) ~value1;
+
+        System.out.printf("~%d = %02X\n", value1, value2);
+    }
+
+    void studyLeftShift() {
+        byte value = 64;
+        byte result;
+        int count = 1;
+
+        result = (byte) (value << count);
+        System.out.printf("%02X << %d = %02X\n", value, count, result);
+    }
+
+    void studyRightShift() {
+        byte value = -1;
+        byte result;
+        int count = 1;
+
+//        result = (byte) (value >>> count);
+        System.out.printf("%02X >> %d = %02X\n", value, count, value >> count);
+        System.out.printf("%02X >>> %d = %02X\n", value, count, value >>> count);
+    }
+
     public static void main(String[] args) {
         BitwiseStudy bitwiseStudy = new BitwiseStudy();
 //        bitwiseStudy.studyAnd();
 //        bitwiseStudy.studyOr();
-        bitwiseStudy.studyXor();
+//        bitwiseStudy.studyXor();
+//        bitwiseStudy.studyNot();
+//        bitwiseStudy.studyLeftShift();
+        bitwiseStudy.studyRightShift();
     }
 }
