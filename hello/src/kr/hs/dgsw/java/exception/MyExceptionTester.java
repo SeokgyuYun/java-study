@@ -1,5 +1,7 @@
 package kr.hs.dgsw.java.exception;
 
+import java.util.Scanner;
+
 public class MyExceptionTester {
     public void method1(String name) {
         try {
@@ -22,5 +24,6 @@ public class MyExceptionTester {
     public static void main(String[] args) {
         MyExceptionTester tester = new MyExceptionTester();
         tester.method1("Brown");
+
     }
 }
